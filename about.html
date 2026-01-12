@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós | Igreja Batista de Canoas</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style/about.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="about-header">
+  <nav class="navbar" aria-label="Menu página Sobre nós">
+    <a class="brand" href="index.html">
+      <img src="src/images/logo.png" alt="Logo Igreja Batista de Canoas" class="logo">
+    </a>
+
+    <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <ul class="nav-list" id="primary-navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" aria-current="page">Sobre</a></li>
+      <li><a href="index.html#ministerios">Ministérios</a></li>
+      <li><a href="index.html#agenda">Agenda</a></li>
+      <li><a class="btn-live" href="index.html#aovivo">Ao Vivo</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="about-page">
+    <div class="aboutpg-content">
+
+      <div class="aboutpg-text">
+        <h1>Sobre Nós</h1>
+
+        <p>
+          Somos uma igreja focada e centrada unicamente em  <span>Jesus Cristo</span>, hoje e para sempre,
+          construindo uma comunidade de discípulos e ensinando-os a viver como <span>Jesus</span> ,
+          para a glória de Deus Pai.
+        </p>
+
+        <p>
+          Somos, simplesmente, uma igreja de Jesus — um lugar de fé, esperança e amor
+          para todas as pessoas.
+        </p>
+      </div>
+
+      <div class="container">
+        <h2>Galeria</h2>
+
+        <div class="gallery-grid">
+          <img src="../src/images/gallery/image1.jpg" alt="Momento de comunhão da igreja">
+          <img src="../src/images/gallery/image2.jpg" alt="Culto na Igreja Batista de Canoas">
+          <img src="../src/images/gallery/image3.jpg" alt="Louvor congregacional">
+          <img src="../src/images/gallery/image4.jpg" alt="Evento da igreja">
+          <img src="../src/images/gallery/image5.jpg" alt="Momento de oração">
+          <img src="../src/images/gallery/image6.jpg" alt="Celebração na igreja">
+          <img src="../src/images/gallery/image7.jpg" alt="Atividade em comunidade">
+          <img src="../src/images/gallery/image8.jpg" alt="Encontro da igreja">
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
+
+  <!-- SCRIPT NAVBAR -->
+  <script>
+    (function(){
+      const toggle = document.querySelector('.nav-toggle');
+      const body = document.body;
+
+      toggle.addEventListener('click', function(){
+        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !expanded);
+        body.classList.toggle('nav-open');
+      });
+
+      document.querySelectorAll('.nav-list a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (body.classList.contains('nav-open')) {
+            body.classList.remove('nav-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+          body.classList.remove('nav-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
