@@ -3,60 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO básico -->
+  <meta name="description" content="Igreja Batista de Canoas - Uma igreja de Jesus que valoriza pessoas e anuncia o evangelho com graça e verdade.">
+  <meta name="author" content="Igreja Batista de Canoas">
+
   <title>Igreja Batista de Canoas</title>
 
   <!-- Fonte Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="src/style/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
+  <!-- Ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
+
 <body>
   <!-- HEADER / NAVBAR -->
   <header class="site-header" id="site-header">
     <nav class="navbar" aria-label="Menu principal">
-      <a class="brand" href="#home">
-        <img src="src/images/logo.png" alt="Logo Igreja Batista de Canoas" class="logo">
+      <a class="brand" href="#home" aria-label="Ir para início">
+        <img src="src/images/logo.png" alt="Logo da Igreja Batista de Canoas" class="logo">
       </a>
 
       <!-- botão hambúrguer mobile -->
-      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
-        <span class="hamburger"></span>
+      <button 
+        class="nav-toggle" 
+        aria-controls="primary-navigation" 
+        aria-expanded="false" 
+        aria-label="Abrir menu"
+        type="button"
+      >
+        <span class="hamburger" aria-hidden="true"></span>
       </button>
 
-      <ul class="nav-list" id="primary-navigation">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#ministerios">Ministérios</a></li>
-        <li><a href="#agenda">Agenda</a></li>
-        <li><a class="btn-live" href="https://www.youtube.com/@igrejabatistadecanoas5232">Ao Vivo</a></li>    
+      <ul class="nav-list" id="primary-navigation" role="menu">
+        <li role="none"><a role="menuitem" href="#home">Home</a></li>
+        <li role="none"><a role="menuitem" href="#about">Sobre</a></li>
+        <li role="none"><a role="menuitem" href="#ministerios">Ministérios</a></li>
+        <li role="none"><a role="menuitem" href="#agenda">Agenda</a></li>
+        <li role="none">
+          <a 
+            class="btn-live" 
+            href="https://www.youtube.com/@igrejabatistadecanoas5232" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Ao Vivo
+          </a>
+        </li>    
       </ul>
     </nav>
   </header>
 
-<main>
+
+<main id="main-content">
+
     <!-- HERO -->
-<section id="home" class="hero"> 
+
+<section id="home" class="hero" aria-labelledby="hero-title"> 
   <div class="hero-content"> 
-    <h1 class="hero-title"> Igreja <span>Batista</span> de Canoas </h1> 
+    <h1 class="hero-title" id="hero-title"> 
+      Igreja <span>Batista</span> de Canoas
+     </h1> 
+
     <h2 class="hero-subtitle"> Uma igreja de Jesus </h2> 
+
     <div class="hero-actions"> 
-      <a class="btn-hero" href="https://www.youtube.com/@igrejabatistadecanoas5232" target="_blank">Culto Ao Vivo</a> 
+
+      <a class="btn-hero" href="https://www.youtube.com/@igrejabatistadecanoas5232" target="_blank" rel="noopener noreferrer">Culto Ao Vivo</a> 
       <a class="btn-contato" href="about.html">Conheça a IBC</a> 
+
     </div> 
+
     <p class="hero-verse"> "O Deus de toda graça, os fortalecerá e os porá sobre firmes alicerces" 
       <span>- 1° Pedro 5:10</span> </p> 
     </div>  
   </section>
 
-<section class="sobre-nos" id="about">
+<section class="sobre-nos" id="about" aria-labelledby="sobre-title">
   <div class="sobre-container">
     
-      <h2>Bem-vindo à IBCanoas</h2>
+      <h2  id="sobre-title">Bem-vindo à IBCanoas</h2>
 
-      <div class="linha"></div>
+      <div class="linha" aria-hidden="true"></div>
 
       <p>
       É uma alegria ter você aqui! Somos uma igreja que ama a presença de Deus,
@@ -64,23 +98,23 @@
       </p>
 
       <div class="info">
-        <p><i class="ph ph-clock"></i> <strong>Horários de Culto:</strong> Domingo às 10h e 19h30</p>
-        <p><i class="ph ph-map-pin"></i> <strong>Endereço:</strong> Rua Alexandre de Gusmão, 1844</p>
+        <p><i class="ph ph-clock" aria-hidden="true"></i> <strong>Horários de Culto:</strong> Domingo às 10h e 19h30</p>
+        <p><i class="ph ph-map-pin" aria-hidden="true"></i> <strong>Endereço:</strong> Rua Alexandre de Gusmão, 1844</p>
       </div>
 
       <div class="sobre-buttons">
         <a href="about.html" class="btn-outline">
-        <i class="ri-book-open-line"></i>
+        <i class="ri-book-open-line" aria-hidden="true"></i>
         Nossa História →
         </a>
 
-        <a href="src/docs/Livre para Escolher entre Orgulho e Humildade (1).pdf" class="btn-outline" target="_blank" rel="noopener noreferrer">
-        <i class="ri-file-text-line"></i>
+        <a href="src/docs/Livre para Escolher entre Orgulho e Humildade (1).pdf"  class="btn-outline" target="_blank" rel="noopener noreferrer">
+        <i class="ri-file-text-line" aria-hidden="true"></i>
         Última Pregação →
         </a>
 
-        <a href="https://www.instagram.com/ibcanoas/" target="_blank" class="btn-outline">
-        <i class="ri-instagram-line"></i>
+        <a href="https://www.instagram.com/ibcanoas/" target="_blank" class="btn-outline"  rel="noopener noreferrer">
+        <i class="ri-instagram-line" aria-hidden="true"></i>
         Instagram →
         </a>
       </div>
@@ -92,9 +126,9 @@
 
 
   <!-- MINISTÉRIOS -->
-  <section id="ministerios">
+  <section id="ministerios" aria-labelledby="ministerios-title">
     <div class="ministerio-content">
-      <h2>Ministérios</h2>
+      <h2 id="ministerios-title">Ministérios</h2>
 
       <div class="ministerio-item">
         <div class="min-img">
